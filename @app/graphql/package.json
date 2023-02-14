@@ -1,0 +1,29 @@
+{
+  "name": "@app/graphql",
+  "private": true,
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "yarn run codegen && tsc -b",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "postinstall": "yarn run build",
+    "test": "cross-env NODE_ENV=test NODE_OPTIONS=\"$NODE_OPTIONS -r @app/config/env\" jest",
+    "watch": "yarn run codegen --watch"
+  },
+  "dependencies": {
+    "cosmiconfig-toml-loader": "^1.0.0",
+    "graphql": "^16.6.0",
+    "tslib": "^2.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@graphql-codegen/cli": "^3.0.0",
+    "@graphql-codegen/client-preset": "^2.0.0",
+    "@graphql-codegen/typescript-msw": "^1.1.6",
+    "@graphql-typed-document-node/core": "^3.1.1",
+    "@types/node": "^18.13.0",
+    "jest": "^27.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}

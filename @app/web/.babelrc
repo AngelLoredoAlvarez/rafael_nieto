@@ -1,0 +1,34 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "lodash",
+        "libraryDirectory": "",
+        "camel2DashComponentName": false
+      },
+      "lodash"
+    ],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    ["@babel/plugin-proposal-private-methods", { "loose": true }],
+    ["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+  ],
+  "env": {
+    "development": {
+      "presets": [
+        [
+          "next/babel",
+          {
+            "preset-env": {
+              "targets": {
+                "node": "current",
+                "browsers": "last 2 chrome versions"
+              }
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

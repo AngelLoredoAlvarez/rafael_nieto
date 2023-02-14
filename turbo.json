@@ -1,0 +1,71 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalEnv": [
+    "NODE_ENV",
+    "GRAPHILE_LICENSE",
+    "DATABASE_URL",
+    "ENABLE_GRAPHIQL",
+    "DATABASE_VISITOR",
+    "GRAPHQL_PAGINATION_CAP",
+    "GRAPHQL_DEPTH_LIMIT",
+    "GRAPHQL_COST_LIMIT",
+    "HIDE_QUERY_COST",
+    "SHADOW_DATABASE_URL",
+    "TEST_DATABASE_URL",
+    "IN_TESTS",
+    "DATABASE_OWNER",
+    "DATABASE_OWNER_PASSWORD",
+    "DATABASE_HOST",
+    "DATABASE_NAME",
+    "AUTH_DATABASE_URL",
+    "DATABASE_AUTHENTICATOR",
+    "DATABASE_AUTHENTICATOR_PASSWORD",
+    "SHADOW_AUTH_DATABASE_URL",
+    "CYPRESS_ROOT_URL",
+    "ROOT_URL",
+    "LEGAL_TEXT",
+    "GM_DBURL",
+    "PG_DUMP",
+    "CI",
+    "TRUST_PROXY",
+    "FORCE_SSL",
+    "PORT",
+    "ENABLE_CYPRESS_COMMANDS",
+    "GITHUB_KEY",
+    "GITHUB_SECRET",
+    "T_AND_C_URL",
+    "SECRET",
+    "MAXIMUM_SESSION_DURATION_IN_MILLISECONDS",
+    "REDIS_URL",
+    "AWS_ACCESS_KEY_ID",
+    "AWS_SECRET_ACCESS_KEY",
+    "PROJECT_NAME",
+    "JWT_SECRET",
+    "ROOT_DATABASE_URL",
+    "CONFIRM_DROP"
+  ],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "dev": {
+      "cache": false
+    },
+    "lint": {
+      "outputs": []
+    },
+    "posttest": {
+      "outputs": []
+    },
+    "pretest": {
+      "outputs": []
+    },
+    "setup": {
+      "outputs": ["dist/**", "build/**"]
+    },
+    "watch": {
+      "outputs": []
+    }
+  }
+}

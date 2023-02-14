@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Rafael Nieto",
+    "slug": "rafael-nieto",
+    "version": "0.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "rafael-nieto",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "platforms": ["ios", "android", "web"],
+    "ios": {
+      "bundleIdentifier": "com.rafael.nieto"
+    },
+    "android": {
+      "package": "com.rafael.nieto",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "87abc9de-60f8-4e9e-b9d6-66d8f29f1dd2"
+      }
+    },
+    "plugins": ["expo-community-flipper"]
+  }
+}
